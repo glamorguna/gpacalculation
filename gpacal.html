@@ -1,0 +1,156 @@
+<html>
+<head>
+<script language="javascript">
+function gpa()
+{
+if(thisf.c1.value=="") 
+{thisf.c1.value=0;}
+if(thisf.c2.value=="") 
+{thisf.c2.value=0;}
+if(thisf.c3.value=="") 
+{thisf.c3.value=0;}
+if(thisf.c4.value=="") 
+{thisf.c4.value=0;}
+if(thisf.c5.value=="") 
+{thisf.c5.value=0;}
+if(thisf.c6.value=="") 
+{thisf.c6.value=0;}
+if(thisf.c7.value=="") 
+{thisf.c7.value=0;}
+if(thisf.m1.value=="") 
+{thisf.m1.value=0;}
+if(thisf.m2.value=="") 
+{thisf.m2.value=0;}
+if(thisf.m3.value=="") 
+{thisf.m3.value=0;}
+if(thisf.m4.value=="") 
+{thisf.m4.value=0;}
+if(thisf.m5.value=="") 
+{thisf.m5.value=0;}
+if(thisf.m6.value=="") 
+{thisf.m6.value=0;}
+if(thisf.m7.value=="") 
+{thisf.m7.value=0;}
+if(thisf.m1.value<40) 
+{thisf.m1.value=0;}
+if(thisf.m2.value<40) 
+{thisf.m2.value=0;}
+if(thisf.m3.value<40) 
+{thisf.m3.value=0;}
+if(thisf.m4.value<40) 
+{thisf.m4.value=0;}
+if(thisf.m5.value<40) 
+{thisf.m5.value=0;}
+if(thisf.m6.value<40) 
+{thisf.m6.value=0;}
+if(thisf.m7.value<40) 
+{thisf.m7.value=0;}
+p=parseInt(thisf.c1.value);
+q=parseInt(thisf.c2.value);
+s=parseInt(thisf.c3.value);
+r=parseInt(thisf.c4.value);
+t=parseInt(thisf.c5.value);
+x=parseInt(thisf.c6.value);
+y=parseInt(thisf.c7.value);
+pm=parseInt(thisf.m1.value)/10;
+qm=parseInt(thisf.m2.value)/10;
+sm=parseInt(thisf.m3.value)/10;
+rm=parseInt(thisf.m4.value)/10;
+tm=parseInt(thisf.m5.value)/10;
+xm=parseInt(thisf.m6.value)/10;
+ym=parseInt(thisf.m7.value)/10;
+up=(p*pm)+(q*qm)+(s*sm)+(r*rm)+(t*tm)+(x*xm)+(y*ym);
+dw=p+q+s+r+t+x+y;
+r=up/dw
+thisf.r1.value=r.toFixed(2);
+}
+function cgpa()
+{
+if(thisf.s1.value=="") 
+{thisf.s1.value=0;}
+if(thisf.s2.value=="") 
+{thisf.s2.value=0;}
+if(thisf.s3.value=="") 
+{thisf.s3.value=0;}
+if(thisf.s4.value=="") 
+{thisf.s4.value=0;}
+if(thisf.s5.value=="") 
+{thisf.s5.value=0;}
+if(thisf.s6.value=="") 
+{thisf.s6.value=0;}
+if(thisf.s1.value !=0) 
+{o=1;}
+if(thisf.s2.value !=0) 
+{o=2;}
+if(thisf.s3.value !=0) 
+{o=3;}
+if(thisf.s4.value !=0) 
+{o=4;}
+if(thisf.s5.value !=0) 
+{o=5;}
+if(thisf.s6.value !=0) 
+{o=6;}
+
+s11=parseFloat(thisf.s1.value);
+s12=parseFloat(thisf.s2.value);
+s13=parseFloat(thisf.s3.value);
+s14=parseFloat(thisf.s4.value);
+s15=parseFloat(thisf.s5.value);
+s16=parseFloat(thisf.s6.value);
+fs=(s11+s12+s13+s14+s15+s16)/o;
+thisf.r2.value=fs.toFixed(2);
+}
+</script>
+</head>
+<body bgcolor="pink">
+<form name="thisf">
+<center>
+<br><font face="Comic Sans MS" size="50" color="#9900c">
+<u><b>GPA Calculation</b></u>
+<hr>
+<u><b>Enter credit value and marks</b></u>
+</font>
+<center>
+<br><font face="Latha" size="20" color="#ff0066">
+subject 1: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter credit" name="c1"> <input type="text" style="border:3px solid black;height:25px" placeholder="Enter marks" name="m1"><br>
+subject 2: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter credit" name="c2"> <input type="text" style="border:3px solid black;height:25px" placeholder="Enter marks" name="m2"><br>
+subject 3: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter credit" name="c3"> <input type="text" style="border:3px solid black;height:25px" placeholder="Enter marks" name="m3"><br>
+subject 4: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter credit" name="c4"> <input type="text" style="border:3px solid black;height:25px" placeholder="Enter marks" name="m4"><br>
+subject 5: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter credit" name="c5"> <input type="text" style="border:3px solid black;height:25px" placeholder="Enter marks" name="m5"><br>
+subject 6: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter credit" name="c6"> <input type="text" style="border:3px solid black;height:25px" placeholder="Enter marks" name="m6"><br>
+subject 7: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter credit" name="c7"> <input type="text" style="border:3px solid black;height:25px" placeholder="Enter marks" name="m7"><br>
+</font></center>
+<hr size="3"><br>
+<input type="button" style="border-color:red;width:70px;height:40px;" value="Find GPA" onclick="gpa()"> <input type="text" style="border:3px solid black;height:25px" placeholder="Your GPA" name="r1"><br>
+<br>Created by Volunteer Student
+<br>
+S.Guna, CS Dept, SSASC
+<hr>
+<br><font face="Comic Sans MS" size="50" color="#9900c">
+<u><b>CGPA Calculation</b></u>
+<hr>
+<u><b>Enter semester GPA</b></u>
+</font>
+<center>
+<br><font face="Latha" size="20" color="#ff0066">
+semester 1: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter GPA" name="s1"> <br>
+semester 2: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter GPA" name="s2"> <br>
+semester 3: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter GPA" name="s3"> <br>
+semester 4: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter GPA" name="s4"> <br>
+semester 5: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter GPA" name="s5"> <br>
+semester 6: <input type="text" style="border:3px solid black;height:25px" placeholder="Enter GPA" name="s6"> <br>
+</font></center>
+<hr size="3"><br>
+<input type="button" style="border-color:red;width:80px;height:40px;" value="Find CGPA" onclick="cgpa()"> <input type="text" style="border:3px solid black;height:25px" placeholder="Your CGPA" name="r2"><br>
+<br>Created by Volunteer Student
+<br>
+S.Guna, CS Dept, SSASC
+<hr>
+</center>
+</form>
+</body>
+</html>
+
+
+
+
